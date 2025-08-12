@@ -1,0 +1,23 @@
+# Main config for evaluation
+# Usage example:
+#   python src/eval.py env=local experiment=debug ckpt_path=path/to/checkpoint.ckpt
+
+defaults:
+  - hydra: default
+  - env: local
+  - paths: default
+  - datamodule: dummy
+  - model: zero_bp_stub
+  - logger: csv
+  - callbacks: default
+  - trainer: default
+  - experiment: debug
+  - _self_
+
+seed: 42
+
+# Checkpoint to evaluate; override from CLI
+ckpt_path: null
+
+# Which loop to run during eval: validate|test
+stage: test

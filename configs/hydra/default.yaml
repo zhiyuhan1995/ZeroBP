@@ -1,0 +1,8 @@
+# Hydra configuration: where to store runs and multiruns
+run:
+  dir: logs/runs/${now:%Y-%m-%d_%H-%M-%S}
+sweep:
+  dir: logs/multirun/${now:%Y-%m-%d_%H-%M-%S}
+  subdir: ${hydra.job.num}
+job:
+  name: zero_bp

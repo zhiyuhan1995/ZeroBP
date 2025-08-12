@@ -1,0 +1,19 @@
+# Main config for training
+# Compose with: python src/train.py env=local experiment=debug trainer.max_epochs=1
+
+defaults:
+  - hydra: default
+  - env: local
+  - paths: default
+  - datamodule: dummy
+  - model: zero_bp_stub
+  - logger: csv
+  - callbacks: default
+  - trainer: default
+  - experiment: debug
+  - _self_
+
+seed: 42
+
+# Optional: checkpoint path to resume
+ckpt_path: null

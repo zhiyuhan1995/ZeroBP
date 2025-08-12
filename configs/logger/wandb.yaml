@@ -1,0 +1,10 @@
+_target_: lightning.pytorch.loggers.WandbLogger
+project: zerobp
+name: ${hydra:job.name}
+save_dir: ${paths.output_dir}
+offline: false
+log_model: false
+entity:
+tags: []
+group:
+job_type: train

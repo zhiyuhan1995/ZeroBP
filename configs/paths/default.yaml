@@ -1,0 +1,6 @@
+# Project paths
+project_root: ${hydra:runtime.cwd}
+output_dir: logs
+checkpoints_dir: ${paths.output_dir}/checkpoints
+artifacts_dir: ${paths.output_dir}/artifacts
+data_dir: /home/data

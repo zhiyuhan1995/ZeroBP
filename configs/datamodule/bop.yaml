@@ -1,0 +1,21 @@
+_target_: zerobp.datamodules.bop_datamodule.BOPDataModule
+
+# Paths and dataset selection
+bop_root: ${paths.data_dir}/BOP_DATASETS
+dataset: ycbv
+train_split: train_pbr
+val_split: test
+
+# Image processing
+img_size: [256, 256]
+normalize: true
+max_images:
+
+# Optional: make BOP dataset yield tuples so the stub MLP can run (not for real use)
+return_tuple_for_stub: false
+
+# Dataloader settings
+pin_memory: true
+dataloader:
+  batch_size: 4
+  num_workers: ${env.num_workers}

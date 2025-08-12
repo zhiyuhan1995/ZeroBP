@@ -1,0 +1,15 @@
+line-length = 120
+indent-width = 4
+target-version = "py310"
+
+[lint]
+select = ["E", "F", "I"]
+ignore = [
+    "E203", # whitespace before ':' (conflicts with black-like style)
+    "E501", # line length (handled separately)
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false

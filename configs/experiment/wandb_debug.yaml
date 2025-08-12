@@ -1,0 +1,20 @@
+# @package _global_
+# Debug experiment with Weights & Biases logging enabled
+
+# Override the logger group to use wandb instead of csv
+defaults:
+  - override /logger: wandb
+
+trainer:
+  max_epochs: 1
+  limit_train_batches: 2
+  limit_val_batches: 2
+  limit_test_batches: 2
+  log_every_n_steps: 1
+
+datamodule:
+  dataloader:
+    batch_size: 8
+
+# allow fast smoke tests post-fit
+test_after_fit: true

@@ -1,0 +1,3 @@
+# Environment-specific settings (e.g., number of workers, precision)
+num_workers: 4
+precision: 32-true

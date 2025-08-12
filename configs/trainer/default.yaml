@@ -1,0 +1,14 @@
+# Lightning Trainer configuration
+accelerator: auto
+devices: 1
+max_epochs: 10
+log_every_n_steps: 10
+detect_anomaly: false
+deterministic: true
+precision: ${env.precision}
+# Useful for quick debug runs; override from CLI
+fast_dev_run: false
+# Limits for debugging; can be overridden by experiment configs or CLI
+limit_train_batches: null
+limit_val_batches: null
+limit_test_batches: null

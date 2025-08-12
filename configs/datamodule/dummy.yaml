@@ -1,0 +1,18 @@
+_target_: zerobp.datamodules.dummy_datamodule.DummyDataModule
+# Dataset sizes for synthetic data
+n_train: 512
+n_val: 128
+n_test: 128
+input_dim: 16
+output_dim: 8
+noise_std: 0.05
+
+# Dataloader settings
+shuffle: true
+pin_memory: true
+
+# Nested dataloader sub-config for CLI override compatibility, e.g. datamodule.dataloader.batch_size=4
+# The DataModule will read from here.
+dataloader:
+  batch_size: 32
+  num_workers: ${env.num_workers}

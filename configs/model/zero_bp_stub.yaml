@@ -1,0 +1,7 @@
+_target_: zerobp.models.zero_bp_module.ZeroBPModule
+# The stub model mirrors datamodule dims for synthetic data
+input_dim: ${datamodule.input_dim}
+output_dim: ${datamodule.output_dim}
+hidden_dims: [64, 64]
+lr: 0.001
+weight_decay: 0.0001
